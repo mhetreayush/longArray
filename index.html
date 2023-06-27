@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <pre>
+
+            ------------------Code1-------------------------
+            import java.util.Scanner;
+ class rotationOfArray {
+    static void leftRotate(int arr[], int d, int n)
+    {
+        int i, j;
+        if (d == 0 || d == n)
+            return;
+
+        if (d > n)
+            d = d % n;
+        i = d;
+        j = n - d;
+        while (i != j) {
+            if (i < j) 
+            {
+                swap(arr, d - i, d + j - i, i);
+                j -= i;
+            }
+            else 
+            {
+                swap(arr, d - i, d, j);
+                i -= j;
+            }
+        }
+        swap(arr, d - i, d, i);
+    }
+  
+
+    public static void swap(int arr[], int fi, int si,
+                            int d)
+    {
+        int i, temp;
+        for (i = 0; i < d; i++) {
+            temp = arr[fi + i];
+            arr[fi + i] = arr[si + i];
+            arr[si + i] = temp;
+        }
+    }
+  
+public static void main (String[] args)
+{
+	// Scanner sc = new Scanner( System.in);
+	// System.out.println("Enter the N value");
+	// 	int N= sc.nextInt();
+	// 	 int[] arr = new int [N];
+  
+    //     System.out.println(
+    //         "Enter the elements of the array: ");
+    //     for (int i = 0; i < N; i++) {
+    //         if (sc.hasNextInt()) {
+    //             arr[i] = sc.nextInt();
+    //         }
+    //     }
+    //     System.out.println("Enter the no of rotations");
+    //   	int d= sc.nextInt();
+    int N = 5;
+    int[] arr = {1,2,3,4,5};
+    int d =2;
+	leftRotate(arr, d, N);
+}
+}
+            ------------------Code2-------------------------
+            import java.util.Scanner;
+ class rotationOfArray {
+    static void leftRotate(int arr[], int d, int n)
+    {
+        int i, j;
+        if (d == 0 || d == n)
+            return;
+
+        if (d > n)
+            d = d % n;
+        i = d;
+        j = n - d;
+        while (i != j) {
+            if (i < j) 
+            {
+                swap(arr, d - i, d + j - i, i);
+                j -= i;
+            }
+            else 
+            {
+                swap(arr, d - i, d, j);
+                i -= j;
+            }
+        }
+        swap(arr, d - i, d, i);
+    }
+  
+
+    public static void swap(int arr[], int fi, int si,
+                            int d)
+    {
+        int i, temp;
+        for (i = 0; i < d; i++) {
+            temp = arr[fi + i];
+            arr[fi + i] = arr[si + i];
+            arr[si + i] = temp;
+        }
+    }
+  
+public static void main (String[] args)
+{
+	// Scanner sc = new Scanner( System.in);
+	// System.out.println("Enter the N value");
+	// 	int N= sc.nextInt();
+	// 	 int[] arr = new int [N];
+  
+    //     System.out.println(
+    //         "Enter the elements of the array: ");
+    //     for (int i = 0; i < N; i++) {
+    //         if (sc.hasNextInt()) {
+    //             arr[i] = sc.nextInt();
+    //         }
+    //     }
+    //     System.out.println("Enter the no of rotations");
+    //   	int d= sc.nextInt();
+    int N = 5;
+    int[] arr = {1,2,3,4,5};
+    int d =2;
+	leftRotate(arr, d, N);
+}
+}
+        </pre>
+    </div>
+
+</body>
+
+</html>
